@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetería Estudiantil</title>
+    <!-- Enlace a la hoja de estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Encabezado principal -->
+    <header class="hero">
+        <nav class="navbar">
+            <span class="logo">Cafetería Escolar</span>
+            <a href="#menu" class="btn">Ver menú</a>
+        </nav>
+        <div class="hero-content">
+            <h1>Tus snacks favoritos</h1>
+            <p>Pide rápido, evita filas y disfruta tu receso.</p>
+            <a href="#menu" class="btn btn-primary">Hacer un pedido</a>
+        </div>
+    </header>
+
+    <!-- Sección para Grado y Sección (¡NUEVO!) -->
+    <section class="datos-estudiante">
+        <h2>Paso 1: Ingresa tus datos</h2>
+        <p>Es obligatorio llenar esto para hacer tu pedido</p>
+        
+        <div class="formulario">
+            <div class="campo">
+                <label for="grado">Grado:</label>
+                <select id="grado">
+                    <option value="">Selecciona tu grado...</option>
+                    <option value="7mo Grado">7mo Grado</option>
+                    <option value="8vo Grado">8vo Grado</option>
+                    <option value="9no Grado">9no Grado</option>
+                    <option value="1er Año">1er Año Bachillerato</option>
+                    <option value="2do Año">2do Año Bachillerato</option>
+                    <option value="3er Año">3er Año Bachillerato</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="seccion">Sección:</label>
+                <select id="seccion">
+                    <option value="">Selecciona tu sección...</option>
+                    <option value="A">Sección A</option>
+                    <option value="B">Sección B</option>
+                    <option value="C">Sección C</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Menú -->
+    <section id="menu" class="menu">
+        <h2>Paso 2: Elige tu menú</h2>
+        <div class="productos">
+
+            <!-- Producto 1: Bebida -->
+            <div class="producto">
+                <!-- Usamos tu imagen y con CSS mostramos solo el lado izquierdo -->
+                <img src="image_c06739.png" alt="Bebida Refrescante" class="img-bebida">
+                <h3>Bebida Refrescante</h3>
+                <p class="precio">$2.50</p>
+                <!-- Llamamos a JavaScript al hacer clic -->
+                <button onclick="hacerPedido('Bebida Refrescante', '2.50')" class="btn-whatsapp">Pedir por WhatsApp</button>
+            </div>
+
+            <!-- Producto 2: Chili Dog -->
+            <div class="producto">
+                <!-- Usamos tu imagen y con CSS mostramos solo el lado derecho -->
+                <img src="image_c06739.png" alt="Chili Cheese Dog" class="img-comida">
+                <h3>Chili Cheese Dog</h3>
+                <p class="precio">$3.00</p>
+                <!-- Llamamos a JavaScript al hacer clic -->
+                <button onclick="hacerPedido('Chili Cheese Dog', '3.00')" class="btn-whatsapp">Pedir por WhatsApp</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>&copy; 2026 Cafetería Escolar — Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Script de JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
